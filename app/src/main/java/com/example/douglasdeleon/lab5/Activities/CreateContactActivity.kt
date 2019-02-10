@@ -26,7 +26,7 @@ class CreateContactActivity : AppCompatActivity() {
         values.put(ContactsProvider.MAIL, mailInput.text.toString())
         values.put(ContactsProvider.NUMBER, numberInput.text.toString())
 
-        val uri = contentResolver.insert(ContactsProvider.CONTENT_URI,values)
+        val uri = contentResolver.insert(ContactsProvider.CONTENT_URI, values)
 
         Toast.makeText(baseContext, uri!!.toString(), Toast.LENGTH_LONG).show()
 

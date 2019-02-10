@@ -29,6 +29,9 @@
                 android:enabled="true"
                 android:exported="true">
         </provider>
+
+        <activity android:name=".Activities.UpdateContactActivity">
+        </activity>
     </application>
 
 </manifest>
