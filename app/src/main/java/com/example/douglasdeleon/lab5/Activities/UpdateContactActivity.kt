@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.View
 import com.example.douglasdeleon.lab5.ContactsProvider
 import com.example.douglasdeleon.lab5.R
-import kotlinx.android.synthetic.main.activity_contact.*
 import kotlinx.android.synthetic.main.activity_update_contact.*
 
 class UpdateContactActivity : AppCompatActivity() {

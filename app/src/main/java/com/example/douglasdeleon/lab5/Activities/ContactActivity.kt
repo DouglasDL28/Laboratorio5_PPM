@@ -54,5 +54,19 @@ class ContactActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + contactNumber.text))
             startActivity(intent)
         }
+
+        contactEmail.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "message/rfc822"
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("recipient@example.com"))
+            intent.putExtra(Intent.EXTRA_SUBJECT, "subject of email")
+            intent.putExtra(Intent.EXTRA_TEXT, "body of email")
+            try {
+                startActivity(Intent.createChooser(intent, "Send mail..."))
+            } catch (ex: android.content.ActivityNotFoundException) {
+                Toast.makeText(this@ContactActivity, "There are no email clients installed.", Toast.LENGTH_SHORT).show()
+            }
+
+        }
     }
 }
